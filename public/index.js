@@ -19578,18 +19578,6 @@
   // src/index.tsx
   var import_client = __toESM(require_client());
 
-  // src/assets/images/banners/banner-desktop1.jpg
-  var banner_desktop1_default = "./assets/banner-desktop1-EWISY7JX.jpg";
-
-  // src/assets/images/banners/banner-desktop2.jpg
-  var banner_desktop2_default = "./assets/banner-desktop2-ZSBHMDIZ.jpg";
-
-  // src/assets/images/banners/banner-desktop3.jpg
-  var banner_desktop3_default = "./assets/banner-desktop3-DIRONDKQ.jpg";
-
-  // src/assets/images/banners/banner-desktop4.jpg
-  var banner_desktop4_default = "./assets/banner-desktop4-LUBTNNWI.jpg";
-
   // src/components/Collections.tsx
   var import_jsx_runtime = __toESM(require_jsx_runtime());
   var Collections = () => {
@@ -19603,12 +19591,7 @@
         "AMAZON",
         "INGESIMONIS"
       ].map((tab) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { children: tab }, tab)) }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "banner-layout", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "grid", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid-item", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: banner_desktop1_default, alt: "banner 1" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid-item", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: banner_desktop2_default, alt: "banner 2" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid-item", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: banner_desktop3_default, alt: "banner 3" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "grid-item", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: banner_desktop4_default, alt: "banner 4" }) })
-      ] }) })
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", { src: "/banner-desktop1", alt: "banner 1" })
     ] });
   };
 
@@ -19684,4 +19667,4 @@ react/cjs/react-jsx-runtime.development.js:
    * LICENSE file in the root directory of this source tree.
    *)
 */
-//# sourceMappingURL=site.min.js.map
+//# sourceMappingURL=index.js.map

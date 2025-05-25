@@ -1,0 +1,73 @@
+@use 'variables.scss' as *;
+
+.collections {
+    text-align: center;
+
+    .tabs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px;
+        margin: 16px 0;
+
+        button {
+            font-size: $font-size-xl;
+            line-height: $line-height-xl;
+            padding: 0px 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+
+            &:first-child {
+                background-image: linear-gradient(45deg, $white-color, $base-text-color); // 🌈 Customize your gradient here
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-emphasis-color: transparent;
+            }
+
+            &:last-child {
+                background-image: linear-gradient(45deg, $base-text-color, $white-color); // 🌈 Customize your gradient here
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-emphasis-color: transparent;
+            }
+
+            &:hover {
+                color: $light-brown-color;
+                -webkit-background-clip: initial;
+                -webkit-text-fill-color: initial;
+                background-clip: initial;
+                background-image: none;
+            }
+        }
+    }
+
+    .banner-layout {
+        display: flex;
+        justify-content: center;
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            width: 1200px;
+
+            .grid-item {
+                grid-column: span 2;
+
+                &:nth-child(3n + 1) {
+                    grid-column: span 3;
+                }
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                height: 437px;
+            }
+
+        }
+    }
+
+}

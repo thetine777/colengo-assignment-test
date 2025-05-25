@@ -1,6 +1,32 @@
-body {
+@use 'variables.scss' as *;
+
+// Reset for all elements except headings
+*,
+*::before,
+*::after {
     margin: 0;
-    font-family: "Noto Serif JP", serif;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Biryani", sans-serif;
     font-optical-sizing: auto;
-    font-style: normal;
+    font-style: 400;
+    color: $base-text-color;
+}
+
+// Specific font for all heading tags
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Noto Serif JP", serif;
+    font-weight: 500; // Optional, you can adjust
+}
+
+.title {
+    font-weight: 500;
+    text-align: center;
+    font-size: $font-size-h1;
+    line-height: $line-height-h1;
 }

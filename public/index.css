@@ -1,4 +1,4 @@
-/* ../../Users/User/AppData/Local/Temp/tmp-8740-ooCm2hXDEyyp/colengo-assisnment-test/src/assets/styles/index.css */
+/* ../../Users/User/AppData/Local/Temp/tmp-18740-KqazSqnMb6MJ/colengo-assisnment-test/src/assets/styles/index.css */
 *,
 *::before,
 *::after {
@@ -26,7 +26,7 @@ h6 {
   line-height: 64px;
 }
 
-/* ../../Users/User/AppData/Local/Temp/tmp-8740-ooCm2hXDEyyp/colengo-assisnment-test/src/assets/styles/collections.css */
+/* ../../Users/User/AppData/Local/Temp/tmp-18740-KqazSqnMb6MJ/colengo-assisnment-test/src/assets/styles/collections.css */
 .collections {
   text-align: center;
 }
@@ -74,25 +74,17 @@ h6 {
   background-clip: initial;
   background-image: none;
 }
-.collections .banner-layout {
-  display: flex;
-  justify-content: center;
-}
-.collections .banner-layout .grid {
+.collections .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: 1fr;
   gap: 16px;
   width: 1200px;
 }
-.collections .banner-layout .grid .grid-item {
+.collections .grid .grid-item {
   grid-column: span 2;
 }
-.collections .banner-layout .grid .grid-item:nth-child(3n+1) {
-  grid-column: span 3;
-}
-.collections .banner-layout .grid img {
+.collections .grid img {
   width: 100%;
   object-fit: cover;
-  height: 437px;
 }
-/*# sourceMappingURL=site.min.css.map */
+/*# sourceMappingURL=index.css.map */

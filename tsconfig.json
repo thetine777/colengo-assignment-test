@@ -2,13 +2,34 @@
     "compilerOptions": {
         "target": "ESNext",
         "module": "ESNext",
+        "lib": [
+            "DOM",
+            "ESNext"
+        ],
         "jsx": "react-jsx",
-        "strict": true,
-        "moduleResolution": "Node",
+        "moduleResolution": "node",
         "esModuleInterop": true,
-        "skipLibCheck": true
+        "allowSyntheticDefaultImports": true,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "baseUrl": ".",
+        "paths": {
+            "@assets/*": [
+                "src/assets/*"
+            ]
+        }
     },
     "include": [
-        "src"
+        "src",
+        "src/declarations.d.ts"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "public"
     ]
 }
