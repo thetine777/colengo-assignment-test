@@ -1,0 +1,40 @@
+@use 'variables.scss' as *;
+
+.register-session {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0px;
+    .register-content {
+        text-align: center;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            font-size: $font-size-h2;
+            line-height: $line-height-xl;
+        }
+
+        .subtitle {
+            font-size: $font-size-sm;
+            line-height: $line-height-xsm;
+            margin: 14px 24px;
+        }
+
+        .description {
+            font-size: $font-size-2xsm;
+            line-height: $line-height-2xsm;
+            color: $grey-color;
+            margin-top: 20px;
+            margin-bottom: 32px;
+        }
+
+        .button-layout {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+        }
+    }
+
+}

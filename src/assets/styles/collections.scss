@@ -2,7 +2,7 @@
 
 .collections {
     text-align: center;
-
+    margin-bottom: 80px;
     .tabs {
         display: flex;
         flex-wrap: wrap;
@@ -47,6 +47,7 @@
     .banner-layout {
         display: flex;
         justify-content: center;
+
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -58,6 +59,42 @@
 
                 &:nth-child(3n + 1) {
                     grid-column: span 3;
+                }
+
+                &.grid-image {
+                    background-size: cover;
+                    background-position: center;
+                    position: relative;
+                    min-height: 200px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding: 0 64px;
+
+                    .grid-image-content {
+                        text-align: center;
+                        width: 70%;
+
+                        .title {
+                            font-size: $font-size-lg;
+                            line-height: $line-height-h1;
+                            color: $white-color;
+                        }
+
+                        .subtitle {
+                            font-size: $font-size-sm;
+                            line-height: $line-height-xsm;
+                            color: $light-brown-color;
+                        }
+
+                        .description {
+                            font-size: $font-size-2xsm;
+                            line-height: $line-height-2xsm;
+                            color: $white-color;
+                            margin-top: 32px;
+                            margin-bottom: 24px;
+                        }
+                    }
                 }
             }
 

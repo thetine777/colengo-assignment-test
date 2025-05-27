@@ -2,11 +2,26 @@
 $base-text-color: #000000;
 $white-color: #ffffff;
 $light-brown-color: #C6A26D;
+$grey-color: #909294;
+$grey-color-light: #BDBAB7;
 
 // font sizes
-$font-size-h1: 48px;
+$font-size-xsm: 10px;
+$font-size-2xsm: 12px;
+$font-size-sm: 14px;
+$font-size-md: 16px;
 $font-size-xl: 20px;
+$font-size-h1: 48px;
+$font-size-h2: 34px;
+$font-size-lg: 56px;
 
 // line heights
 $line-height-h1: 64px;
 $line-height-xl: 48px;
+$line-height-xsm: 18px;
+$line-height-2xsm: 16px;
+
+// font weights
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;

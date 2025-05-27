@@ -1,0 +1,19 @@
+@use 'variables.scss' as *;
+
+.button {
+    font-size: $font-size-2xsm;
+    line-height: $line-height-2xsm;
+    padding: 14px 16px;
+    font-weight: $font-weight-bold;
+    border: none;
+    cursor: pointer;
+
+    &.secondary {
+        background: $white-color;
+    }
+
+    &.primary {
+        background: $light-brown-color;
+        color: $white-color;
+    }
+}
