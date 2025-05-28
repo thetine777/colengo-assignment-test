@@ -4,20 +4,26 @@ $white-color: #ffffff;
 $light-brown-color: #C6A26D;
 $grey-color: #909294;
 $grey-color-light: #BDBAB7;
+$secondary-brown-color: #F4F0EC;
 
 // font sizes
 $font-size-xsm: 10px;
 $font-size-2xsm: 12px;
 $font-size-sm: 14px;
 $font-size-md: 16px;
+$font-size-xxl: 18px;
 $font-size-xl: 20px;
 $font-size-h1: 48px;
+$font-size-h1-md: 46px;
 $font-size-h2: 34px;
 $font-size-lg: 56px;
 
 // line heights
 $line-height-h1: 64px;
+$line-height-lg: 56px;
 $line-height-xl: 48px;
+$line-height-h2: 46px;
+$line-height-xxl: 40px;
 $line-height-xsm: 18px;
 $line-height-2xsm: 16px;
 
@@ -25,3 +31,8 @@ $line-height-2xsm: 16px;
 $font-weight-normal: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
+
+// responsive breakpoints
+$breakpoint-mobile: 743px;
+$breakpoint-tablet-small: 932px;
+$breakpoint-tablet: 1235px;

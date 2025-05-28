@@ -1,0 +1,177 @@
+@use 'variables.scss' as *;
+
+.product-session {
+    margin-top: 80px;
+    padding: 0 16px;
+    position: relative;
+
+    .customer-favorites {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .customer-content {
+            text-align: center;
+
+            label {
+                color: $light-brown-color;
+                font-size: $font-size-sm;
+                line-height: $line-height-xsm;
+            }
+
+            div {
+                text-align: right;
+
+                h2 {
+                    color: $light-brown-color;
+                    font-size: $font-size-h2;
+                    line-height: $line-height-h2;
+
+                    &:first-child {
+                        margin-right: 5px;
+                    }
+                }
+            }
+
+        }
+
+        &.desktop {
+            margin-top: 66px;
+        }
+
+        &.tablet {
+            display: none;
+        }
+    }
+
+    .product-carousel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+
+        .product-content {
+            width: 1392px;
+            position: relative;
+
+            .custom-prev,
+            .custom-next {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                z-index: 10;
+                cursor: pointer;
+            }
+
+            .custom-prev {
+                left: -40px;
+            }
+
+            .custom-next {
+                right: -40px;
+            }
+
+            .product-carousel {
+                position: relative;
+                /* Make sure arrows are relative to the container */
+            }
+
+            .product-card {
+                width: 260px;
+                text-align: center;
+                font-family: Arial, sans-serif;
+
+                &.image {
+                    background-color: $secondary-brown-color;
+                    padding: 33px 24px;
+                    height: 280px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        height: 232px;
+                        width: 192px;
+                        object-fit: contain;
+                    }
+                }
+
+                &.details {
+                    margin-top: 16px;
+
+                    label {
+                        font-size: $font-size-2xsm;
+                        line-height: $line-height-xsm;
+                        font-weight: $font-weight-bold;
+                    }
+
+                    p {
+                        font-size: $font-size-xsm;
+                        line-height: $line-height-2xsm;
+                        color: $grey-color;
+                        margin-top: 8px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+// tablet below
+@media screen and (max-width: $breakpoint-tablet) {
+    .product-session {
+
+        // ✅ Fade effect
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 120px; // wider fade for smoother effect
+            height: 100%;
+            pointer-events: none;
+            z-index: 3;
+        }
+
+        &::before {
+            left: 7px;
+            background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+        }
+
+        &::after {
+            right: 7px;
+            background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+        }
+    }
+}
+
+// tablet small below
+@media screen and (max-width: $breakpoint-tablet-small) {
+    .product-session {
+        margin-top: 48px;
+
+        .customer-favorites {
+            &.tablet {
+                display: flex;
+            }
+        }
+    }
+}
+
+// mobile below
+@media screen and (max-width: $breakpoint-mobile) {
+    .product-session {
+        padding: 0px;
+        margin-top: 40px;
+
+        &::before {
+            left: -5px;
+        }
+
+        &::after {
+            right: -5px;
+        }
+    }
+}

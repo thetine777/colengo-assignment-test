@@ -2,6 +2,7 @@ import React from "react";
 import { Collections } from "./components/Collections";
 import { Divider } from "./components/Divider";
 import { RegisterSession } from "./components/RegisterSession";
+import { ProductCarousel } from "./components/ProductCarousel";
 
 const App: React.FC = () => {
   return (
@@ -11,6 +12,7 @@ const App: React.FC = () => {
       <Divider />
       <RegisterSession />
       <Divider />
+      <ProductCarousel />
     </div>
   );
 };

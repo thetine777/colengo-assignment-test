@@ -3,50 +3,105 @@
 .collections {
     text-align: center;
     margin-bottom: 80px;
-    .tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+
+    .tabs-layout {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        gap: 24px;
-        margin: 16px 0;
 
-        button {
-            font-size: $font-size-xl;
-            line-height: $line-height-xl;
-            padding: 0px 24px;
-            background: none;
-            border: none;
-            cursor: pointer;
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin: 16px 0;
+            overflow-x: auto;
+            padding: 0 24px;
+            position: relative;
+            // ✅ Hide scrollbar
+            scrollbar-width: none; // Firefox
+            -ms-overflow-style: none; // IE/Edge
 
-            &:first-child {
-                background-image: linear-gradient(45deg, $white-color, $base-text-color); // 🌈 Customize your gradient here
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                text-emphasis-color: transparent;
+            &::-webkit-scrollbar {
+                display: none; // Chrome/Safari
             }
 
-            &:last-child {
-                background-image: linear-gradient(45deg, $base-text-color, $white-color); // 🌈 Customize your gradient here
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                background-clip: text;
-                text-emphasis-color: transparent;
+            // ✅ Fade effect
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 120px; // wider fade for smoother effect
+                height: 100%;
+                pointer-events: none;
+                z-index: 1;
             }
 
-            &:hover {
-                color: $light-brown-color;
-                -webkit-background-clip: initial;
-                -webkit-text-fill-color: initial;
-                background-clip: initial;
-                background-image: none;
+            &::before {
+                left: 42px;
+                background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+            }
+
+            &::after {
+                right: 42px;
+                background: linear-gradient(to left, #fff, rgba(255, 255, 255, 0));
+            }
+
+            .menu {
+                font-size: $font-size-xl;
+                line-height: $line-height-xl;
+                padding: 0px 24px;
+                background: none;
+                border: none;
+                cursor: pointer;
+
+                &.active {
+                    color: $light-brown-color;
+                }
+
+                &:hover {
+                    color: $light-brown-color;
+                    -webkit-background-clip: initial;
+                    -webkit-text-fill-color: initial;
+                    background-clip: initial;
+                    background-image: none;
+                }
             }
         }
     }
 
+
+
     .banner-layout {
+        width: 1200px;
+        position: relative;
+
+        .custom-prev,
+        .custom-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .custom-prev {
+            left: -132px;
+        }
+
+        .custom-next {
+            right: -132px;
+        }
+    }
+
+    .banner-content {
         display: flex;
         justify-content: center;
+        position: relative;
 
         .grid {
             display: grid;
@@ -85,6 +140,12 @@
                             font-size: $font-size-sm;
                             line-height: $line-height-xsm;
                             color: $light-brown-color;
+
+                            label {
+                                font-size: $font-size-sm;
+                                line-height: $line-height-xsm;
+                                color: $light-brown-color;
+                            }
                         }
 
                         .description {
@@ -107,4 +168,112 @@
         }
     }
 
+}
+
+// tablet below
+@media screen and (max-width: $breakpoint-tablet) {
+    .collections {
+        display: block;
+
+        .tabs-layout {
+            position: relative;
+
+            .tabs {
+                position: static;
+
+                &::before {
+                    left: 0px;
+                }
+
+                &::after {
+                    right: 0px;
+                }
+
+            }
+        }
+
+        .banner-content {
+            .grid {
+                .grid-item {
+                    &.grid-image {
+                        justify-content: center;
+                        padding: 0px;
+
+                        .grid-image-content {
+                            .title {
+                                font-size: $font-size-h1;
+                                line-height: $line-height-h1;
+                            }
+
+                            .subtitle {
+                                margin: 8px 0px;
+                            }
+
+                            .description {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// tablet small below
+@media screen and (max-width: $breakpoint-tablet-small) {
+    .collections {
+        margin-bottom: 48px;
+
+        .banner-content {
+            .grid {
+                grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+
+                img {
+                    height: 244px;
+                }
+            }
+        }
+    }
+}
+
+// mobile below
+@media screen and (max-width: $breakpoint-mobile) {
+    .collections {
+        margin-bottom: 40px;
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 0px;
+
+        .tabs-layout {
+            .tabs {
+                padding: 0px;
+                gap: 11px;
+
+                .menu {
+                    font-size: $font-size-xxl;
+                    line-height: $line-height-xxl;
+                    padding: 0px 20px;
+                }
+            }
+        }
+
+        .banner-content {
+            .grid {
+                display: block;
+
+                .grid-item {
+                    &.grid-image {
+                        height: 260px;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    height: 260px;
+                }
+            }
+        }
+    }
 }

@@ -26,6 +26,7 @@ h6 {
 
 .layout {
     margin: 80px auto;
+    overflow-x: hidden;
 
     .title {
         font-weight: $font-weight-medium;
@@ -33,5 +34,28 @@ h6 {
         font-size: $font-size-h1;
         line-height: $line-height-h1;
     }
+}
 
+// tablet small below
+@media screen and (max-width: $breakpoint-tablet-small) {
+    .layout {
+        margin: 48px auto;
+
+        .title {
+            font-size: $font-size-h1-md;
+            line-height: $line-height-lg;
+        }
+    }
+}
+
+// tablet small below
+@media screen and (max-width: $breakpoint-mobile) {
+    .layout {
+        margin: 40px auto;
+
+        .title {
+            font-size: $font-size-h2;
+            line-height: $line-height-xl;
+        }
+    }
 }
