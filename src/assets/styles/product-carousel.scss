@@ -55,8 +55,8 @@
             width: 1392px;
             position: relative;
 
-            .custom-prev,
-            .custom-next {
+            .custom-prev-product,
+            .custom-next-product {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
@@ -64,11 +64,11 @@
                 cursor: pointer;
             }
 
-            .custom-prev {
+            .custom-prev-product {
                 left: -40px;
             }
 
-            .custom-next {
+            .custom-next-product {
                 right: -40px;
             }
 

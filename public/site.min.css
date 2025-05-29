@@ -707,18 +707,18 @@ h6 {
   width: 1392px;
   position: relative;
 }
-.product-session .product-carousel .product-content .custom-prev,
-.product-session .product-carousel .product-content .custom-next {
+.product-session .product-carousel .product-content .custom-prev-product,
+.product-session .product-carousel .product-content .custom-next-product {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
   cursor: pointer;
 }
-.product-session .product-carousel .product-content .custom-prev {
+.product-session .product-carousel .product-content .custom-prev-product {
   left: -40px;
 }
-.product-session .product-carousel .product-content .custom-next {
+.product-session .product-carousel .product-content .custom-next-product {
   right: -40px;
 }
 .product-session .product-carousel .product-content .product-carousel {

@@ -82,10 +82,10 @@ export const ProductCarousel: React.FC = () => {
       <section className="product-carousel">
         <div className="product-content">
           {/* Custom Arrows */}
-          <div className="custom-prev">
+          <div className="custom-prev-product">
             <img src={ArrowLeft} alt="arrow left" />
           </div>
-          <div className="custom-next">
+          <div className="custom-next-product">
             <img src={ArrowRight} alt="arrow right" />
           </div>
           <Swiper
@@ -100,8 +100,8 @@ export const ProductCarousel: React.FC = () => {
               pauseOnMouseEnter: true,
             }}
             navigation={{
-              nextEl: ".custom-next",
-              prevEl: ".custom-prev",
+              nextEl: ".custom-next-product",
+              prevEl: ".custom-prev-product",
             }}
             breakpoints={{
               1477: {
